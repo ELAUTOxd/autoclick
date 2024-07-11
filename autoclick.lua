@@ -22,7 +22,7 @@ local function onActivationKeyPress(input)
         if isInGame(game) then
             autoclick()
         else
-            warn("El script de autoclick solo funciona en el juego '" .. gameName .. "'.")
+            warn("El script de autoclick solo funciona en el juego '" .. Blade ball .. "'.")
         end
     end
 end
