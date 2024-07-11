@@ -10,9 +10,11 @@ end
 
 local function autoclick()
     while true do
-        -- Simular un clic
-        UserInputService.InputBegan:Fire(Enum.KeyCode.MouseButton1, false) -- Simular clic izquierdo del ratón
+        -- Simular un clic izquierdo del ratón
+        game:GetService("VirtualUser"):CaptureController()
+        game:GetService("VirtualUser"):Button1Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
         wait(0.001) -- Intervalo de autoclick de 0.001 segundos (ajustar según sea necesario)
+        game:GetService("VirtualUser"):Button1Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
     end
 end
 
