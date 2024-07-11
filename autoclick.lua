@@ -13,6 +13,7 @@ local function autoclick()
     while true do
         -- Simular un clic (sustituir con la lógica específica según el caso)
         HttpService:PostAsync("https://api.roblox.com/ClickEndpoint", "{}")
+        wait(0.001) -- Intervalo de autoclick de 0.001 segundos
     end
 end
 
@@ -22,7 +23,7 @@ local function onActivationKeyPress(input)
         if isInGame(game) then
             autoclick()
         else
-            warn("El script de autoclick solo funciona en el juego '" .. Blade ball .. "'.")
+            warn("El script de autoclick solo funciona en el juego '" .. gameName .. "'.")
         end
     end
 end
