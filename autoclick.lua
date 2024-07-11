@@ -1,5 +1,4 @@
 -- Configuración inicial
-local HttpService = game:GetService("HttpService")
 local UserInputService = game:GetService("UserInputService")
 
 local activationKey = Enum.KeyCode.F6 -- Tecla de activación (en este caso, la tecla F6)
@@ -11,9 +10,9 @@ end
 
 local function autoclick()
     while true do
-        -- Simular un clic (sustituir con la lógica específica según el caso)
-        HttpService:PostAsync("https://api.roblox.com/ClickEndpoint", "{}")
-        wait(0.001) -- Intervalo de autoclick de 0.001 segundos
+        -- Simular un clic
+        UserInputService.InputBegan:Fire(Enum.KeyCode.MouseButton1, false) -- Simular clic izquierdo del ratón
+        wait(0.001) -- Intervalo de autoclick de 0.001 segundos (ajustar según sea necesario)
     end
 end
 
